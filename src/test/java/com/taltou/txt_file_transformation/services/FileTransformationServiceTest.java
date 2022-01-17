@@ -21,13 +21,13 @@ public class FileTransformationServiceTest {
 
     @Test
     void testOneerror() throws IOException {
-        Output output=fileInformationsService.processInformations(inputFile);
+        Output output=fileInformationsService.builtInformations(inputFile);
         assertEquals(output.getErrors().size(), 1);
     }
 
     @Test
     void testFourreferences() throws IOException {
-        Output output=fileInformationsService.processInformations(inputFile);
+        Output output=fileInformationsService.builtInformations(inputFile);
         assertEquals(output.getReferences().size(), 4);
     }
 

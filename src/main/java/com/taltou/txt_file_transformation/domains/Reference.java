@@ -26,17 +26,19 @@ public class Reference {
     @JacksonXmlProperty(localName = "color", isAttribute = true)
     private Color color;
 
-    public Reference (String line){
-        String[] reference = line.split(";");
-        handleInputData(reference);
+    public Reference (String occurrence){
+        String[] reference = occurrence.split(";");
+        checkInputData(reference);
         this.numReference = reference[0];
-        this.size = Integer.parseInt(reference[3]);
-        this.price = Double.parseDouble(reference[2]);
         this.color = Color.valueOf(reference[1]);
+        this.price = Double.parseDouble(reference[2]);
+        this.size = Integer.parseInt(reference[3]);
+
+
     }
 
 
-    private  void handleInputData(String[] reference) {
+    private  void checkInputData(String[] reference) {
         String colors = Arrays.asList(Color.values()).toString();
 
 

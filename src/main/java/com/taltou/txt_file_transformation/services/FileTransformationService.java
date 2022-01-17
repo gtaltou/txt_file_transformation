@@ -25,7 +25,7 @@ public class FileTransformationService implements IFileTransformationService{
      * @throws IOException: the iOException
      */
 
-    public Output processInformations(String inputFile) throws IOException {
+    public Output builtInformations(String inputFile) throws IOException {
         List<String> refferenceList= Files.lines(Paths.get(inputFile)).collect(Collectors.toList());
 
         Output output = new Output(inputFile);
@@ -55,7 +55,7 @@ public class FileTransformationService implements IFileTransformationService{
 
     public Output processTransformation(String inputFile, String outputFile, String outputType) throws IOException {
 
-        Output output = processInformations(inputFile);
+        Output output = builtInformations(inputFile);
 
         if (outputType.equals(OutputType.XML.toString())) {
             builtXMLFile(output, outputFile);
