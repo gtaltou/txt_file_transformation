@@ -1,0 +1,30 @@
+{
+  "inputFile" : "Ref_07102014.txt",
+
+  "references" : [ {
+    "numReference" : "1460100040",
+    "size" : 27,
+    "price" : 45.12,
+    "type" : "R"
+  }, {
+    "numReference" : "1460900848",
+    "size" : 145,
+    "price" : 12.0,
+    "type" : "G"
+  }, {
+    "numReference" : "1462100044",
+    "size" : 19,
+    "price" : 5.56,
+    "type" : "G"
+  }, {
+    "numReference" : "1462100403",
+    "size" : 97,
+    "price" : 105.23,
+    "type" : "B"
+  } ],
+  "errors" : [{
+    "line" : 5,
+    "message" : "Incorrect value for color",
+    "value" : "1462100403;A;100.1;9"
+  }]
+}
